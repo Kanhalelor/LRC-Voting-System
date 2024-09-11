@@ -60,22 +60,22 @@ if($data === false)
     $password = $_POST['password'];
     $usertype = $_POST['usertype'];
     
-    do {
-        if (move_uploaded_file($_FILES['candidateImage']['tmp_name'], $target_file)) {
-            // Image updated successfully
-            $sql = "UPDATE IGNORE candidates SET username = '$username', password='$password', usertype='$usertype', fullNames='$names', profileIMG='$filename' WHERE id = $id ";
-        
-        }
-
+    if (move_uploaded_file($_FILES['candidateImage']['tmp_name'], $target_file)) {
+        // Image updated successfully
+        $sql = "UPDATE IGNORE candidates SET username = '$username', password='$password', usertype='$usertype', fullNames='$names', profileIMG='$filename' WHERE id = $id ";
+    
         $result = mysqli_query($data,$sql);
-
+    
         if(!$result) {
             die("connection error");
         }
+    
         $msg = "Record Updated";
         header("location: ./admin-home.php");
-        exit;
-    }while(true);
+    } else {
+        // Error uploading image
+        $msg = "Image upload failed.";
+    }
 }
 ?>
 
