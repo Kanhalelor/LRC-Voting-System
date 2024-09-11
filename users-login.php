@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <nav class="main-nav">
         <h1 class="welcome-msg">LRC Voting Application</h1>
         <ul class="menu">
-            <li><a class="sign-up" href="./client/home.html">HOME</a></li>
+            <li><a class="sign-up" href="./client/index.php">HOME</a></li>
         </ul>
     </nav>
     <div class="login-form">
