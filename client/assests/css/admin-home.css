@@ -1,0 +1,249 @@
+.admin-dashboard {
+    width: 100%;
+    height: 30vh;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.add-user, .view-users {
+    padding: 1rem 2rem;
+    background: #6f7070;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 1rem;
+    border: 1px solid  #fff;
+    border-radius: 15px;
+}
+
+.add-user:hover {
+    background: #e0e0e0;
+    color: #121212;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.view-users:hover {
+    background: #e0e0e0;
+    color: #121212;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.users-container {
+    width: 100%;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    flex-flow: row-wrap;
+
+}
+.users {
+    display: flex;
+    flex: 1;
+    width: 80%;
+    background: #e0e0e0;
+    align-items: center;
+    align-items: center;
+    padding: .4rem 1rem;
+    margin: .66rem 0;
+    border: thin solid #fff;
+    flex-direction: column;
+}
+.add-user-modal {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    width: 40%;
+    background: #f0f0f0;
+    align-items: center;
+    padding: .4rem 1rem;
+    margin: .66rem 0;
+    border: thin solid #fff;
+}
+
+/* table styles */
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.del-user-btn {
+    background: tomato;
+    padding: .3rem .4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.del-user-btn:hover {
+    opacity: .9;
+    color: #fff;
+}
+.edit-user-btn {
+    background: #df8602;
+    padding: .3rem .4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.edit-user-btn:hover {
+    opacity: .9;
+    color: #fff;
+}
+/* add new user form styles */
+.login-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: 100%;
+    background: #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin: 3rem 0;
+    padding: .5rem;
+    position: relative;
+    border-radius: 10px;
+}
+.item-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+.login {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+    padding-inline-start: 1.5rem 0;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+label {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: 600;
+    color: #121212;
+    padding: .4rem 0;
+}
+.terms {
+    color: #f8851a;
+}
+
+.signup-btn {
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    background: #e0e0e0;
+    cursor: pointer;
+    color: #121212;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-top: 2rem;
+}
+/* sign-up btn hover effects  */
+.signup-btn :hover {
+    background: #fff;
+    color: #f8851a;
+}
+
+input {
+    align-self: flex-start;
+    border: none;
+    outline: none;
+    padding: .4rem .2rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+input:focus {
+    border: 2px solid #f8851a;
+}
+
+@media screen and (max-width: 900px) {
+    .users-container {
+        flex-direction: column;
+        width: fit-content;
+    }
+    .users {
+        width: fit-content;
+    }
+    .users-table {
+        width: fit-content;
+    }
+    th {
+        width: fit-content;
+    }
+    .add-user-modal {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        padding: 0.1rem 0.1rem;
+        margin-top: 1rem;
+      }
+      .menu-a {
+        display: none;
+        flex-flow: column;
+        text-align: center;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        font-size: 10px;
+        background: #7e7e71;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0.4rem 0;
+        transition: 0.3s linear;
+        z-index: 100;
+      }
+      .menu button:hover {
+        border-bottom: 2px solid #eee;
+        /* height: 100%; */
+      }
+      .menu a:hover {
+        border-bottom: 2px solid #eee;
+        /* height: 100%; */
+      }
+
+      .school-name {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        top: 0;
+        font-size: 12px;
+        color: #eee;
+      }
+}
+/* ................. */
